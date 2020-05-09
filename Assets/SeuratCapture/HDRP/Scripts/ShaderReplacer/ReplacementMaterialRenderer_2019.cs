@@ -21,7 +21,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 using UnityEngine;
 #if UNITY_RENDER_PIPELINE_HDRP
-using UnityEngine.Experimental.Rendering.HDPipeline;
+using UnityEngine.Rendering.HighDefinition;
 #endif
 using UnityEngine.Rendering;
 
@@ -31,7 +31,7 @@ partial struct MaterialReplacer
 #if UNITY_RENDER_PIPELINE_HDRP && UNITY_2019_1_OR_NEWER
     private DrawingSettings drawingSettings;
 
-    public ReplacementMaterialRenderer(ref Material targetMaterial )
+    public void ReplacementMaterialRenderer(ref Material targetMaterial )
     {
         drawingSettings = new DrawingSettings();
         drawingSettings.SetShaderPassName(0, new ShaderTagId("DepthOnly"));
