@@ -24,8 +24,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 #if UNITY_RENDER_PIPELINE_HDRP
-using UnityEngine.Experimental.Rendering;
-using UnityEngine.Experimental.Rendering.HDPipeline;
+using UnityEngine.Rendering.HighDefinition;
 #endif
 using UnityEngine.Rendering;
 
